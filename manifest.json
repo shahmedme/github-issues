@@ -1,0 +1,36 @@
+{
+	"name": "GitHub Issues",
+	"description": "Easily create github issues",
+	"version": "1.0",
+	"manifest_version": 3,
+	"author": "Shakil Ahmed <shakilahmed6055@gmail.com>",
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": ["storage", "activeTab", "scripting"],
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "/img/get_started16.png",
+			"32": "/img/get_started32.png",
+			"48": "/img/get_started48.png",
+			"128": "/img/get_started128.png"
+		}
+	},
+	"icons": {
+		"16": "/img/get_started16.png",
+		"32": "/img/get_started32.png",
+		"48": "/img/get_started48.png",
+		"128": "/img/get_started128.png"
+	},
+	"content_scripts": [
+		{
+			"js": ["/js/main.js"],
+			"css": ["/css/style.css"],
+			"matches": ["https://github.com/*"],
+			"run_at": "document_end",
+			"all_frames": false,
+			"match_about_blank": false
+		}
+	]
+}

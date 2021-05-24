@@ -1,0 +1,14 @@
+.create-issue_btn {
+    color: inherit;
+    margin-right: 20px;
+}
+
+.create-issue_btn:hover {
+    text-decoration: none;
+    color: var(--color-text-link) !important;
+}
+
+.create-issue_btn.fullscreen:hover {
+    text-decoration: none;
+    color: var(--color-text-white) !important;
+}
